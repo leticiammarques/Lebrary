@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LeBrary | Cadastro</title>
+    <script src="./js/funcoes.js"></script>
+
+    <link rel="stylesheet" href="./css/cadastro.css">
+    <link rel="icon" href="./assets/imgs/flavicon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+<header id="header" class="header">
+    <div class="container">
+
+        <div class="logo" href="">
+            <div class="borda-logo">
+                <img src="./assets/imgs/logo.png" alt="">
+                <h2>LeBrary</h2>
+            </div> <!--.borda-logo-->
+        </div> <!--.logo-->
+
+        <ul class="navbar">
+            <li>
+                <a href="./index.html">INICIO</a>
+            </li>
+            <li>
+                <a href="">SOBRE</a>
+            </li>
+            <li>
+                <a href="./contato.html">CONTATO</a>
+            </li>
+            <li>
+                <a href="./login.html">LOGIN</a>
+            </li>
+            <li>
+                <a href="./cadastro.html">CADASTRAR</a>
+            </li>
+        </ul> <!--.navbar-->
+            
+    </div> <!--.container-->
+</header> <!--.header-->
+
+
+<div class="cadastro">
+    <div class="container">
+
+        <div class="div-esquerda">
+            <div class="img-lateral">
+                <img src="./assets/imgs/livro-gif.gif" alt="">
+            </div> <!--.img-lateral-->
+            <div class="btn-lateral">
+                <h4>Escrever é perigoso pois nem sempre podemos garantir
+                    que nossas palavras serão lidas no espírito em que foram 
+                    escritas - <i>A Última Carta de Amor</i>
+                </h4>
+            </div> <!--.btn-lateral-->
+        </div> <!--.div-esquerda-->
+
+        <div class="div-cadastro">
+            <div id="form_cadastro">
+                <h3>NOME</h3>
+                <input id="nome_input" type="text" placeholder="Ex: LeBrary">
+                <h3>EMAIL</h3>
+                <input id="email_input" type="text" placeholder="Ex: lebrary@gmail.com">
+                <h3>SENHA</h3>
+                <input id="senha_input" type="password" placeholder="********">
+                <h3>CONFIRMAR SENHA</h3>
+                <input id="confirmacao_senha_input" type="password" placeholder="********">
+
+                <button onclick="cadastrar()" class="btn-lateral">CADASTRAR</button><!--.btn-lateral-->
+                <div id="div_aguardar" class="loading-div">
+                    <img src="./assets/circle-loading.gif" id="loading-gif" style='display:none'>
+                </div>
+            </div> <!--form_cadastro-->
+        </div> <!--.div_cadastro-->
+
+    </div> <!--.container-->
+</div> <!--.cadastro-->
+
+<div id="div_erros_login"></div>
+<div class="footer">
+    <div class="borda-footer">
+        <div class="redes-sociais">
+            <img src="./assets/imgs/facebook.png" alt="">
+            <img src="./assets/imgs/icon-instagram.png" alt="">
+            <img src="./assets/imgs/icon-linkedIn.png" alt="">
+        </div> <!--.redes-sociais-->
+        <div class="copy">
+            <h4>Feito por Letícia Marques &copy;</h4>
+        </div><!--.copy-->
+    </div> <!--.borda-footer-->
+</div> <!--.footer-->
+</body>
+</html>
+
+<script>
+
+    function cadastrar() {
+        aguardar();
+
+        var nomeVar = nome_input.value;
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
+        var confirmacaoSenhaVar = confirmacao_senha_input.value;
+
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                nome: nomeVar,
+                email: emailVar,
+                senha: senhaVar,
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                window.alert("Cadastro realizado com sucesso!");
+                window.location = "login.html";
+                finalizarAguardar();
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            finalizarAguardar();
+        });
+    }
+
+</script>

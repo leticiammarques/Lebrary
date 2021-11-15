@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeBrary | Login</title>
+    <link rel="stylesheet" href="./css/cadastro.css">
+    <link rel="icon" href="./assets/imgs/flavicon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="./js/funcoes.js"></script>
+
+</head>
+
+<body>
+    <header id="header" class="header">
+        <div class="container">
+
+            <div class="logo" href="./index.html">
+                <div class="borda-logo">
+                    <img src="./assets/imgs/logo.png" alt="">
+                    <h2>LeBrary</h2>
+                </div>
+                <!--.borda-logo-->
+            </div>
+            <!--.logo-->
+
+            <ul class="navbar">
+                <li>
+                    <a href="./index.html">INICIO</a>
+                </li>
+                <li>
+                    <a href="">SOBRE</a>
+                </li>
+                <li>
+                    <a href="./contato.html">CONTATO</a>
+                </li>
+                <li>
+                    <a href="./login.html">LOGIN</a>
+                </li>
+                <li>
+                    <a href="./cadastro.html">CADASTRAR</a>
+                </li>
+            </ul>
+            <!--.navbar-->
+
+        </div>
+        <!--.container-->
+    </header>
+    <!--.header-->
+
+
+    <div class="cadastro">
+        <div class="container">
+
+            <div class="div-esquerda">
+                <div class="img-lateral">
+                    <img src="./assets/imgs/livro-gif.gif" alt="">
+                </div>
+                <!--.img-lateral-->
+                <div class="btn-lateral">
+                    <h4>Ainda não é cadastrado? Vire essa página agora mesmo</h4>
+                    <a href="./cadastro.html">CADASTRAR</a>
+                </div>
+                <!--.btn-lateral-->
+            </div>
+            <!--.div-esquerda-->
+
+            <div class="div-cadastro">
+                <div id="form_login">
+                    <h3>EMAIL</h3>
+                    <input id="email_input" type="text" placeholder="Ex: lebrary@gmail.com">
+                    <h3>SENHA</h3>
+                    <input id="senha_input" type="password" placeholder="********">
+                        <button class="btn-lateral" onclick="entrar()">LOGIN</button>
+                    <!--.btn-lateral-->
+                    <div id="div_aguardar" class="loading-div">
+                        <img src="./assets/circle-loading.gif" id="loading-gif">
+                    </div>
+                </div>
+            </div>
+        </div><!--.container-->
+    </div><!--.cadastro-->
+
+<!--footer inicio-->
+    <div class="footer">
+        <div class="borda-footer">
+            <div class="redes-sociais">
+                <img src="./assets/imgs/facebook.png" alt="">
+                <img src="./assets/imgs/icon-instagram.png" alt="">
+                <img src="./assets/imgs/icon-linkedIn.png" alt="">
+            </div>
+            <!--.redes-sociais-->
+            <div class="copy">
+                <h4>Feito por Letícia Marques &copy;</h4>
+            </div>
+            <!--.copy-->
+        </div>
+        <!--.borda-footer-->
+    </div>
+    <!--.footer-->
+</body>
+
+</html>
+
+<script>
+
+    function limparFormulario() {
+        document.getElementById("form_login").reset();
+    }
+
+    function entrar() {
+        aguardar();
+
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
+
+        // TODO: VERIFICAR AS VALIDAÇÕES QUE ELES ESTÃO APRENDENDO EM ALGORITMOS 
+        if (emailVar == "" || senhaVar == "") {
+            window.alert("Preencha todos os campos para prosseguir!");
+            finalizarAguardar();
+            return false;
+        }
+
+        if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1) {
+            window.alert("Ops, e-mail inválido! Verifique e tente novamente.");
+            finalizarAguardar();
+        }
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                email: emailVar,
+                senha: senhaVar,
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.id;
+
+                    setTimeout(function () {
+                        window.location = "./dashboard/cards.html";
+                    }, 1000); // apenas para exibir o loading
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+</script>
