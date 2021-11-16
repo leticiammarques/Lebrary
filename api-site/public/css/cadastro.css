@@ -1,6 +1,6 @@
 :root {
     --color-ligth: #F0E6EF;
-    --color-pink-ligth: #EFC3E6;
+    --color-pink-ligth: #efc3e6;
     --color-pink: #F0A6CA;
     --color-blue-ligth: #B8BEDD;
     --color-purple-ligth: #9C89B8;
@@ -96,9 +96,18 @@ button {
 /*Página do Index*/
 
 .banner {
-    /* margin-top: 130px; */
-    height: 90vh;
     position: relative;
+}
+
+.banner .container div .teste {
+    z-index:9999;
+    position: relative;
+    color: var(--color-purple);
+    top: 300px;
+    font-size: 3rem;
+    left: 7.5%;
+    background-color: rgba(239, 195, 230, 0.479);
+    margin: 50px;
 }
 
 .banner .container div {
@@ -293,44 +302,92 @@ button {
     }
   }
 
-.banner2 {
-    height: 100vh;
+.sobre-mim {
+    margin-top: -10vh;
+    height: 110vh;
     display: flex;
+    align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
-.banner2 .container {
+.sobre-mim .container {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     width: 80%;
+    padding: 30px;
 }
 
-.banner2 .container h1 {
+.sobre-mim h1 {
     width: 80%;
     text-align: center;
 }
 
-.banner2 .container .img-index {
+.sobre-mim .container .img-index {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 50%;
 }
 
-.banner2 .container .foto1-banner {
+.sobre-mim .container .foto1-banner {
     background-color: var(--color-violet);
     width: 300px;
     height: 300px;
     transform: rotate(17.67deg);
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.banner2 .container img {
+.sobre-mim .container img {
     height: 300px;
     position: absolute;
     transform-origin: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
+.sobre-mim .container .texto-index {
+  width: 50%;
+}
+
+.banner3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  background-color: var(--color-pink);
+  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.banner3 .container {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  flex-direction: row;
+}
+
+.banner3 .container .texto-index {
+  width: 40%;
+}
+
+.banner3 .img-banner img{
+  width: 600px;
+  transform-origin: center;
+  position: absolute;
+  margin-top: -395px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.banner3 .container .img-banner .foto2-banner {
+  background-color: var(--color-violet);
+  margin-top: -100px;
+  width: 600px;
+  height: 380px;
+  transform: rotate(-17.67deg);
+  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
 
 /*Corpo contato*/
 .contato {
