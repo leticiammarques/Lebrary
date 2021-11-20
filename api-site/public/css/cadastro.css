@@ -136,6 +136,7 @@ button {
     clip-path: circle(150px at center center);
     animation: flashlight 5000ms infinite;
   }
+
   .banner .container div:after {
     content: '';
     width: 25px;
@@ -144,65 +145,8 @@ button {
     left: calc(50% + 59px);
     bottom: 100px;
     background-repeat: no-repeat;
-    background-image: radial-gradient(circle, #fff 50%, transparent 50%), radial-gradient(circle, #fff 50%, transparent 50%);
-    background-size: 10px 10px;
-    background-position: left center, right center;
-    animation: eyes 5000ms infinite;
   }
-  @-moz-keyframes flashlight {
-    0%, 9% {
-      opacity: 0;
-      clip-path: circle(150px at 45% 10%);
-    }
-    10%, 15%, 85% {
-      opacity: 1;
-    }
-    50% {
-      clip-path: circle(150px at 60% 20%);
-    }
-    54%, 100% {
-      clip-path: circle(150px at 55% 92%);
-    }
-    88%, 100% {
-      opacity: 0;
-    }
-  }
-  @-webkit-keyframes flashlight {
-    0%, 9% {
-      opacity: 0;
-      clip-path: circle(150px at 45% 10%);
-    }
-    10%, 15%, 85% {
-      opacity: 1;
-    }
-    50% {
-      clip-path: circle(150px at 60% 20%);
-    }
-    54%, 100% {
-      clip-path: circle(150px at 55% 92%);
-    }
-    88%, 100% {
-      opacity: 0;
-    }
-  }
-  @-o-keyframes flashlight {
-    0%, 9% {
-      opacity: 0;
-      clip-path: circle(150px at 45% 10%);
-    }
-    10%, 15%, 85% {
-      opacity: 1;
-    }
-    50% {
-      clip-path: circle(150px at 60% 20%);
-    }
-    54%, 100% {
-      clip-path: circle(150px at 55% 92%);
-    }
-    88%, 100% {
-      opacity: 0;
-    }
-  }
+
   @keyframes flashlight {
     0%, 9% {
       opacity: 0;
@@ -216,86 +160,6 @@ button {
     }
     54%, 100% {
       clip-path: circle(150px at 55% 92%);
-    }
-    88%, 100% {
-      opacity: 0;
-    }
-  }
-  @-moz-keyframes eyes {
-    0%, 52% {
-      opacity: 0;
-    }
-    53%, 87% {
-      opacity: 1;
-    }
-    64% {
-      transform: scaleY(1);
-    }
-    67% {
-      transform: scaleY(0);
-    }
-    70% {
-      transform: scaleY(1);
-    }
-    88%, 100% {
-      opacity: 0;
-    }
-  }
-  @-webkit-keyframes eyes {
-    0%, 52% {
-      opacity: 0;
-    }
-    53%, 87% {
-      opacity: 1;
-    }
-    64% {
-      transform: scaleY(1);
-    }
-    67% {
-      transform: scaleY(0);
-    }
-    70% {
-      transform: scaleY(1);
-    }
-    88%, 100% {
-      opacity: 0;
-    }
-  }
-  @-o-keyframes eyes {
-    0%, 52% {
-      opacity: 0;
-    }
-    53%, 87% {
-      opacity: 1;
-    }
-    64% {
-      transform: scaleY(1);
-    }
-    67% {
-      transform: scaleY(0);
-    }
-    70% {
-      transform: scaleY(1);
-    }
-    88%, 100% {
-      opacity: 0;
-    }
-  }
-  @keyframes eyes {
-    0%, 52% {
-      opacity: 0;
-    }
-    53%, 87% {
-      opacity: 1;
-    }
-    64% {
-      transform: scaleY(1);
-    }
-    67% {
-      transform: scaleY(0);
-    }
-    70% {
-      transform: scaleY(1);
     }
     88%, 100% {
       opacity: 0;
@@ -381,11 +245,81 @@ button {
 
 .banner3 .container .img-banner .foto2-banner {
   background-color: var(--color-violet);
-  margin-top: -100px;
+  margin-top: -115px;
   width: 600px;
   height: 380px;
   transform: rotate(-17.67deg);
   box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.explicacao {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.explicacao .container {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.explicacao .container .text-index {
+  width: 55%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.explicacao .container .text-index .descricao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.explicacao .container .text-index .descricao img {
+  width: 90px;
+  margin-right: 20px;
+}
+
+.fundo-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+}
+
+.fundo-card .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 60%;
+  height: 100%;
+  background-color: var(--color-pink);
+  border-radius: 5px;
+}
+
+.fundo-card .card img {
+  width: 80%;
+  margin-top: 10px;
+}
+
+.fundo-card .card .botoes-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 130px;
+  margin-bottom: 10px;
+}
+
+.fundo-card .card .botoes-card img{
+  width: 50px;
 }
 
 
@@ -572,7 +506,6 @@ button:hover {
     position: relative;
     height: 80px;
     width: 100%;
-    bottom: -8px;
     background: var(--color-pink-ligth);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
