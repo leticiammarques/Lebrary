@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem Vindo | Lebrary</title>
+
+    <script src="./js/funcoes.js"></script>
+
+    <link rel="stylesheet" href="./css/cadastro.css">
+    <link rel="shortcut icon" href="./assets/imgs/flavicon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+</head>
+<body>
+    
+
+    <header id="header" class="header">
+        <div class="container">
+    
+            <div class="logo" href="index.html">
+                <div class="borda-logo">
+                    <img src="./assets/imgs/logo.png" alt="">
+                    <h2>LeBrary</h2>
+                </div> <!--.borda-logo-->
+            </div> <!--.logo-->
+    
+            <ul class="navbar">
+                <li>
+                    <a href="./index.html">INICIO</a>
+                </li>
+                <li>
+                    <a href="./index.html #sobre">SOBRE</a>
+                </li>
+                <li>
+                    <a href="./contato.html">CONTATO</a>
+                </li>
+                <li>
+                    <a href="./login.html">LOGIN</a>
+                </li>
+                <li>
+                    <a href="./cadastro.html">CADASTRAR</a>
+                </li>
+            </ul> <!--.navbar-->
+                
+        </div> <!--.container-->
+    </header> <!--.header-->
+
+    <div class="caroussel">
+        <div class="fundo-caroussel">
+            <span class="library">O LOCAL SEGURO PARA SUA IMAGINAÇÃO...</span>
+          <img class="slides" src="./assets/imgs/carroussel_1.jpg">
+          <img class="slides" src="./assets/imgs/carroussel_2.jpg">
+          <img class="slides" src="./assets/imgs/carroussel_3.jpg">
+          <img class="slides" src="./assets/imgs/carroussel_4.jpg">
+        </div>
+    </div>
+
+<div class="total-cards">
+    <div class="agroup">
+        <div class="line"></div>
+        <h1>LIVROS</h1>
+        <div class="line"></div>
+    </div>
+    <div class="cards">
+        <div class="container">
+          <div class="card card-1">
+            <div class="img-card">
+              <img src="https://www.salaliteraria.com.br/wp-content/uploads/2016/04/Capa_Como-eu-era-antes-de-voce2.jpg" alt="">
+            </div>
+          </div>
+  
+          <div class="card card-2">
+            <div class="img-card">
+              <img src="https://images-na.ssl-images-amazon.com/images/I/81htmSSRhXL.jpg" alt="">
+            </div>
+          </div>
+  
+          <div class="card card-3">
+            <div class="img-card">
+              <img src="https://images-na.ssl-images-amazon.com/images/I/71ps3x0cJ9L.jpg" alt="">
+            </div>
+          </div>
+  
+          <div class="card card-4">
+            <div class="img-card">
+              <img src="https://images-na.ssl-images-amazon.com/images/I/71Tn+WdqilL.jpg" alt="">
+            </div>
+          </div>
+  
+          <div class="card card-5">
+            <div class="img-card">
+              <img src="https://images-na.ssl-images-amazon.com/images/I/712uY3hjabL.jpg" alt="">
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="cards">
+        <div class="container">
+          <div class="card card-1">
+            <div class="img-card">
+              <img src="https://images-na.ssl-images-amazon.com/images/I/71aS13e+OYL.jpg" alt="">
+            </div>
+          </div>
+  
+          <div class="card card-2">
+            <div class="img-card">
+              <img src="https://images-na.ssl-images-amazon.com/images/I/61oIS8ewc9L.jpg" alt="">
+            </div>
+          </div>
+  
+          <div class="card card-3">
+            <div class="img-card">
+              <img src="https://images-na.ssl-images-amazon.com/images/I/51-ki8g+Q0L.jpg" alt="">
+            </div>
+          </div>
+  
+          <div class="card card-4">
+            <div class="img-card">
+              <img src="https://m.media-amazon.com/images/I/410j9F8XsUL.jpg" alt="">
+            </div>
+          </div>
+  
+          <div class="card card-5">
+            <div class="img-card">
+              <img src="https://lojasaraiva.vteximg.com.br/arquivos/ids/6993791/780220.jpg?v=637075499365830000" alt="">
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+
+
+    <div class="footer">
+        <div class="borda-footer">
+            <div class="redes-sociais">
+                <img src="./assets/imgs/facebook.png" alt="">
+                <img src="./assets/imgs/icon-instagram.png" alt="">
+                <img src="./assets/imgs/icon-linkedIn.png" alt="">
+                <img src="./assets/imgs/github.png" alt="">
+            </div> <!--.redes-sociais-->
+            <div class="copy">
+                <h4>Feito por Letícia Marques &copy;</h4>
+            </div><!--.copy-->
+        </div> <!--.borda-footer-->
+    </div> <!--.footer-->
+</body>
+</html>
+
+<script>
+    var slideIndex = 0;
+  carousel();
+  
+  function carousel() {
+    var imgs = document.getElementsByClassName("slides");
+        for (var i = 0; i < imgs.length; i++) {
+        imgs[i].style.display = "none";
+        }
+    slideIndex++;
+    if (slideIndex > imgs.length) {slideIndex = 1}
+    imgs[slideIndex-1].style.display = "block";
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+  }
+  </script>

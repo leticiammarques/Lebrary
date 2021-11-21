@@ -61,6 +61,7 @@ button {
     width: 124px;
     height: 110px;
     margin-left: 50px;
+    border-radius: 10px;
     background: var(--color-pink-ligth);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     color: var(--color-purple);
@@ -74,6 +75,7 @@ button {
     flex-direction: column;
     width: 110px;
     height: 100px;
+    border-radius: 10px;
     background-color: var(--color-pink-ligth);
     border: var(--color-purple) solid 2px;
 }
@@ -99,7 +101,7 @@ button {
     position: relative;
 }
 
-.banner .container div .teste {
+.banner .container div .library {
     z-index:9999;
     position: relative;
     color: var(--color-purple);
@@ -264,11 +266,11 @@ button {
   width: 90%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .explicacao .container .text-index {
-  width: 55%;
+  width: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -301,7 +303,7 @@ button {
   flex-direction: column;
   width: 60%;
   height: 100%;
-  background-color: var(--color-pink);
+  background-color: var(--color-purple-ligth);
   border-radius: 5px;
 }
 
@@ -321,6 +323,120 @@ button {
 .fundo-card .card .botoes-card img{
   width: 50px;
 }
+/*Fim do Index*/
+
+
+/*Página de usuário*/
+
+/*Carossel*/
+.caroussel{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+  margin-top: -54px;
+}
+
+.fundo-caroussel {
+  width: 100%;
+  height: 85vh;
+}
+
+.caroussel .fundo-caroussel .library {
+    z-index:9999;
+    position: relative;
+    color: var(--color-purple);
+    top: 300px;
+    font-size: 3rem;
+    left: 7.5%;
+    background-color: rgba(239, 195, 230, 0.479);
+    margin: 50px;
+}
+
+.slides {
+  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/*Fim Caroussel*/
+
+/*cards*/
+.total-cards {
+  width: 100%;
+  height: 160vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.total-cards .agroup {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  width: 100%;
+  height: 60px;
+}
+
+.total-cards .agroup h1 {
+  color: var(--color-purple);  
+}
+
+.total-cards .agroup .line {
+  background-color: var(--color-purple);
+  width: 500px;
+  height: 1px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 45%;
+}
+
+.cards .container {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 15%;
+  height: 70%;
+  border-radius: 10px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s;
+  background-color: var(--color-pink-ligth);
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  transform: scale(1.1, 1.1);
+}
+
+.img-card{
+  width: 100%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.img-card img{
+  width: 100%;
+  object-fit: cover;
+}
+/*fim cards*/
 
 
 /*Corpo contato*/
@@ -368,6 +484,7 @@ button {
     text-align: justify;
     height: 150px;
 }
+/*Fim corpo contato*/
 
 
 /*Corpo cadastro*/
@@ -377,7 +494,7 @@ button {
     justify-content: center;
     position: relative;
     margin-top: 80px;
-    height: 450px;
+    height: 75vh;
 }
 
 .cadastro .container {
@@ -495,6 +612,7 @@ button:hover {
     height: 50px;
     width: 50px;
 }
+/*Fim corpo cadastro*/
   
 
 /*Rodapé*/
