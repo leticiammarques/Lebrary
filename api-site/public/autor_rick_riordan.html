@@ -14,15 +14,15 @@
 </head>
 <body>
     
-    <header id="header" class="header">
+  <header id="header" class="header">
         <div class="container">
     
             <div class="logo" href="index.html">
                 <div class="borda-logo">
                     <img src="./assets/imgs/logo.png" alt="">
                     <h2>LeBrary</h2>
-                </div> <!--.borda-logo-->
-            </div> <!--.logo-->
+                </div> 
+            </div> 
     
             <ul class="navbar">
                 <li>
@@ -40,23 +40,291 @@
                 <li>
                     <a href="./cadastro.html">CADASTRAR</a>
                 </li>
-            </ul> <!--.navbar-->
+            </ul>
                 
-        </div> <!--.container-->
-    </header> <!--.header-->
+        </div> 
+  </header>
 
     <div class="fundo-header"></div>
 
     <div class="inicio-autor">
-        <div class="autores">
-            <img class="img-autor" src="https://festivalteen.com.br/wp-content/uploads/2021/01/Rick_Riordan.jpg" alt="">
-        </div>
-        <div class="nome-autor">
-            <h1>Rick Riordan</h1>
-            <h3>Gênero:</h3>
-            <p>Infanto-Juvenil</p>
+        <div class="container">
+            <div class="autores">
+                <img class="img-autor" src="https://festivalteen.com.br/wp-content/uploads/2021/01/Rick_Riordan.jpg" alt="">
+                <div class="curtir">
+                  <button onclick="puxar_like()" type="button" class="like"></button>
+                </div>
+            </div>
+            <div class="nome-autor">
+                <h1>Rick Riordan</h1>
+                <h3>Gênero: Infanto-Juvenil</h3>
+                
+                <p>Rick Riordan nasceu em 1964 em San Antonio, Estados Unidos, e hoje vive em Boston com a esposa e os dois filhos.
+                  Autor best-seller do <i>The New York Times</i>, premiado pela YALSA e pela American Library Association, por quinze
+                  anos ensinou inglês e história em escolas de São Francisco, e é a essa experiência que ele atribuiu sua habilidade 
+                  em escrever para o público jovem. 
+                </p>
+                <p>Além das séries <i>Percy Jackson e os Olimpianos</i> e <i>Os Heróis do Olimpo</i>,
+                  inspiradas na mitologia greco-romana, Riordan assina a bem-sucedida série <i>As Crônicas dos Kane</i>, que visita 
+                  deuses e mitos do Egito Antigo, <i>Magnus Chase e os Deuses de Asgard</i> que mostra sobre a mitologia nórdica e 
+                  <i>As Provações de Apolo</i> que nos trás de volta a mitologia grego-romana, mas do ponto de vista do deus Apolo.</p>
+            </div>
         </div>
     </div>
+
+  <div class="descricao-autor">
+        <div class="agroup">
+            <h1>LIVROS</h1>
+        </div>
+        <div class="sub-agroup">
+            <h1>PERCY JACKSON E OS OLIMPIANOS</h1>
+            <div class="line"></div>
+        </div>
+
+            <div class="cards">
+                <div class="container">
+                  <div class="card card-1">
+                    <div class="img-card">
+                      <img src="https://images-na.ssl-images-amazon.com/images/I/51prOSSk2YL._SX332_BO1,204,203,200_.jpg" alt="">
+                    </div>
+                  </div>
+          
+                  <div class="card card-2">
+                    <div class="img-card">
+                      <img src="https://images-na.ssl-images-amazon.com/images/I/91c3vlY3PvL.jpg" alt="">
+                    </div>
+                  </div>
+          
+                  <div class="card card-3">
+                    <div class="img-card">
+                      <img src="https://images-na.ssl-images-amazon.com/images/I/71ps3x0cJ9L.jpg" alt="">
+                    </div>
+                  </div>
+          
+                  <div class="card card-4">
+                    <div class="img-card">
+                      <img src="https://images-na.ssl-images-amazon.com/images/I/51296wXZxrL._SX332_BO1,204,203,200_.jpg" alt="">
+                    </div>
+                  </div>
+          
+                  <div class="card card-5">
+                    <div class="img-card">
+                      <img src="https://upload.wikimedia.org/wikipedia/pt/thumb/3/35/O-ultimo-olimpiano.jpg/240px-O-ultimo-olimpiano.jpg" alt="">
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="container">
+                  <div class="card card-1">
+                    <div class="img-card">
+                      <img src="https://m.media-amazon.com/images/I/51FlA4tlOzL.jpg" alt="">
+                    </div>
+                  </div>
+          
+                  <div class="card card-2">
+                    <div class="img-card">
+                      <img src="http://www.intrinseca.com.br/upload/livros/Capa_PercyGuiaDefinitivo_peq.jpg" alt="">
+                    </div>
+                  </div>
+          
+                  <div class="card card-3">
+                    <div class="img-card">
+                      <img src="https://m.media-amazon.com/images/I/51c38v0sblL.jpg" alt="">
+                    </div>
+                  </div>
+          
+                  <div class="card card-4">
+                    <div class="img-card">
+                      <img src="http://www.intrinseca.com.br/upload/livros/SegredosDoAcampamentoMeioSangue_G.jpg" alt="">
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+      <div class="sub-agroup">
+          <h1>HEROIS DO OLIMPO</h1>
+          <div class="line"></div>
+      </div>
+
+          <div class="cards">
+              <div class="container">
+                <div class="card card-1">
+                  <div class="img-card">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/71ODY-tWNIL.jpg" alt="">
+                  </div>
+                </div>
+        
+                <div class="card card-2">
+                  <div class="img-card">
+                    <img src="https://m.media-amazon.com/images/I/51qVSIWKF7L.jpg" alt="">
+                  </div>
+                </div>
+        
+                <div class="card card-3">
+                  <div class="img-card">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/512Zt8EZObL._SX346_BO1,204,203,200_.jpg" alt="">
+                  </div>
+                </div>
+        
+                <div class="card card-4">
+                  <div class="img-card">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/712uY3hjabL.jpg" alt="">
+                  </div>
+                </div>
+        
+                <div class="card card-5">
+                  <div class="img-card">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/51l3FL9LdFS._SX346_BO1,204,203,200_.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+    <div class="sub-agroup">
+        <h1>AS CRÔNICAS DOS KANE</h1>
+        <div class="line"></div>
+    </div>
+
+        <div class="cards">
+            <div class="container">
+              <div class="card card-1">
+                <div class="img-card">
+                  <img src="https://images-na.ssl-images-amazon.com/images/I/514kEK33fGL._SX346_BO1,204,203,200_.jpg" alt="">
+                </div>
+              </div>
+      
+              <div class="card card-2">
+                <div class="img-card">
+                  <img src="https://lojasaraiva.vteximg.com.br/arquivos/ids/12563109/1010075862.jpg?v=637152386054600000" alt="">
+                </div>
+              </div>
+      
+              <div class="card card-3">
+                <div class="img-card">
+                  <img src="https://lojasaraiva.vteximg.com.br/arquivos/ids/9202305/1006788453.jpg?v=637103761636400000" alt="">
+                </div>
+              </div>
+      
+              <div class="card card-4">
+                <div class="img-card">
+                  <img src="https://images-na.ssl-images-amazon.com/images/I/51bTO66GJoL._SX355_BO1,204,203,200_.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+
+      <div class="sub-agroup">
+        <h1>MAGNUS CHASE E OS DEUSES DE ASGARD</h1>
+        <div class="line"></div>
+      </div>
+    
+            <div class="cards">
+                <div class="container">
+                  <div class="card card-1">
+                    <div class="img-card">
+                      <img src="https://images-na.ssl-images-amazon.com/images/I/61-y2SQtXmS._SX346_BO1,204,203,200_.jpg" alt="">
+                    </div>
+                  </div>
+          
+                  <div class="card card-2">
+                    <div class="img-card">
+                      <img src="https://images-na.ssl-images-amazon.com/images/I/51O84KyolYS._SX349_BO1,204,203,200_.jpg" alt="">
+                    </div>
+                  </div>
+          
+                  <div class="card card-3">
+                    <div class="img-card">
+                      <img src="https://images-na.ssl-images-amazon.com/images/I/61uVn15zUlL._SX346_BO1,204,203,200_.jpg" alt="">
+                    </div>
+                  </div>
+          
+                  <div class="card card-4">
+                    <div class="img-card">
+                      <img src="https://m.media-amazon.com/images/I/61z3aEJWLwL.jpg" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+        <div class="sub-agroup">
+          <h1>AS PROVAÇÕES DE APOLO</h1>
+          <div class="line"></div>
+        </div>
+      
+              <div class="cards">
+                  <div class="container">
+                    <div class="card card-1">
+                      <div class="img-card">
+                        <img src="https://lojasaraiva.vteximg.com.br/arquivos/ids/12107361/1006789273.jpg?v=637142241829200000" alt="">
+                      </div>
+                    </div>
+            
+                    <div class="card card-2">
+                      <div class="img-card">
+                        <img src="https://lojasaraiva.vteximg.com.br/arquivos/ids/12109602/1006803676.jpg?v=637142250121670000" alt="">
+                      </div>
+                    </div>
+            
+                    <div class="card card-3">
+                      <div class="img-card">
+                        <img src="https://cf.shopee.com.br/file/c4aa15bbb9d435b8cb9bb69cb8acfdbd" alt="">
+                      </div>
+                    </div>
+            
+                    <div class="card card-4">
+                      <div class="img-card">
+                        <img src="https://m.media-amazon.com/images/I/51DUKGw+7DL.jpg" alt="">
+                      </div>
+                    </div>
+
+                    <div class="card card-5">
+                      <div class="img-card">
+                        <img src="./assets/imgs/atorredenero.png" alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+        <div class="sub-agroup">
+          <h1>CROSSOVERS E ADICIONAIS</h1>
+          <div class="line"></div>
+        </div>
+      
+              <div class="cards">
+                  <div class="container">
+                    <div class="card card-1">
+                      <div class="img-card">
+                        <img src="http://skoob.s3.amazonaws.com/livros/315171/O_FILHO_DE_SOBEK_1368230313B.jpg" alt="">
+                      </div>
+                    </div>
+            
+                    <div class="card card-2">
+                      <div class="img-card">
+                        <img src="https://upload.wikimedia.org/wikipedia/pt/4/47/O_Cajado_de_Serapis.jpg" alt="">
+                      </div>
+                    </div>
+            
+                    <div class="card card-3">
+                      <div class="img-card">
+                        <img src="https://imagens.lelivros.love/2015/07/Baixar-Livro-A-Coroa-de-Ptolomeu-Rick-Riordan-em-PDF-ePub-e-Mobi-ou-ler-online-370x560.jpg" alt="">
+                      </div>
+                    </div>
+            
+                    <div class="card card-4">
+                      <div class="img-card">
+                        <img src="https://m.media-amazon.com/images/I/51O+LgrfXzL.jpg" alt="">
+                      </div>
+                    </div>
+
+                    <div class="card card-5">
+                      <div class="img-card">
+                        <img src="https://www.lerlivros.net/wp-content/uploads/2021/09/Percy-Jackson-e-Os-Herois-Gregos-%E2%80%93-Rick-Riordan.jpg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  </div>
 
     
     <div class="footer">
@@ -66,12 +334,36 @@
                 <img src="./assets/imgs/icon-instagram.png" alt="">
                 <img src="./assets/imgs/icon-linkedIn.png" alt="">
                 <img src="./assets/imgs/github.png" alt="">
-            </div> <!--.redes-sociais-->
+            </div>
             <div class="copy">
                 <h4>Feito por Letícia Marques &copy;</h4>
-            </div><!--.copy-->
-        </div> <!--.borda-footer-->
-    </div> <!--.footer-->
+            </div>
+        </div>
+    </div> 
 
 </body>
 </html>
+
+<script>
+  // var like = false;
+  // const likeButton = document.getElementsByClassName('.like');
+
+  // const likeAnimation = bodymovin.loadAnimation ({
+  //   curtir: likeButton,
+  //   renderer: 'svg',
+  //   loop: false,
+  //   autoplay: false,
+  //   path: '../assets/imgs/animacao-like.gif'
+  // });
+  // function puxar_like() {
+  //   if(like) {
+  //     likeButton.classList.add('active');
+  //     likeAnimation.playSegments([0, 60], true);
+  //   } else {
+  //     likeButton.classList.remove('active');
+  //   }
+
+  //   like = !like;
+
+  // }
+</script>
