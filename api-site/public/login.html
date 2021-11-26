@@ -22,9 +22,7 @@
                     <img src="./assets/imgs/logo.png" alt="">
                     <h2>LeBrary</h2>
                 </div>
-                <!--.borda-logo-->
             </div>
-            <!--.logo-->
 
             <ul class="navbar">
                 <li>
@@ -43,12 +41,9 @@
                     <a href="./cadastro.html">CADASTRAR</a>
                 </li>
             </ul>
-            <!--.navbar-->
 
         </div>
-        <!--.container-->
     </header>
-    <!--.header-->
 
 
     <div class="cadastro">
@@ -58,14 +53,11 @@
                 <div class="img-lateral">
                     <img src="./assets/imgs/livro-gif.gif" alt="">
                 </div>
-                <!--.img-lateral-->
                 <div class="btn-lateral">
                     <h4>Ainda não é cadastrado? Vire essa página agora mesmo</h4>
                     <a href="./cadastro.html">CADASTRAR</a>
                 </div>
-                <!--.btn-lateral-->
             </div>
-            <!--.div-esquerda-->
 
             <div class="div-cadastro">
                 <div id="form_login">
@@ -76,12 +68,12 @@
                         <button class="btn-lateral" onclick="entrar()">LOGIN</button>
                     <!--.btn-lateral-->
                     <div id="div_aguardar" class="loading-div">
-                        <img src="./assets/circle-loading.gif" id="loading-gif">
+                        <img src="./assets/circle-loading.gif" id="loading-gif"> <!--img de carregar-->
                     </div>
                 </div>
             </div>
-        </div><!--.container-->
-    </div><!--.cadastro-->
+        </div>
+    </div>
 
 <!--footer inicio-->
     <div class="footer">
@@ -92,15 +84,11 @@
                 <img src="./assets/imgs/icon-linkedIn.png" alt="">
                 <img src="./assets/imgs/github.png" alt="">
             </div>
-            <!--.redes-sociais-->
             <div class="copy">
                 <h4>Feito por Letícia Marques &copy;</h4>
             </div>
-            <!--.copy-->
         </div>
-        <!--.borda-footer-->
     </div>
-    <!--.footer-->
 </body>
 
 </html>
@@ -149,8 +137,8 @@
                     console.log(JSON.stringify(json));
 
                     sessionStorage.EMAIL_USUARIO = json.email;
-                    sessionStorage.NOME_USUARIO = json.nome;
-                    sessionStorage.ID_USUARIO = json.id;
+                    sessionStorage.NOME_USUARIO = json.nomeUsuario;
+                    sessionStorage.ID_USUARIO = json.idUsuario;
 
                     setTimeout(function () {
                         window.location = "./usuario.html";
