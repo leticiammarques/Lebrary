@@ -1,235 +1,299 @@
 <!DOCTYPE html>
 <html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bem Vindo | Lebrary</title>
 
     <script src="./js/funcoes.js"></script>
 
-    <link rel="stylesheet" href="./css/cadastro.css">
-    <link rel="shortcut icon" href="./assets/imgs/flavicon.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
-</head>
-<body>
-    
+    <link rel="stylesheet" href="./css/cadastro.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/imgs/flavicon.png"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+  </head>
+  <body onload="validarSessao(), atualizarFeed()">
     <header id="header" class="header">
-        <div class="container">
-    
-            <div class="logo" href="index.html">
-                <div class="borda-logo">
-                    <img src="./assets/imgs/logo.png" alt="">
-                    <h2>LeBrary</h2>
-                </div> <!--.borda-logo-->
-            </div> <!--.logo-->
-    
-            <ul class="navbar">
-                <li>
-                    <a href="./index.html">INICIO</a>
-                </li>
-                <li>
-                    <a href="./index.html #sobre">SOBRE</a>
-                </li>
-                <li>
-                    <a href="./contato.html">CONTATO</a>
-                </li>
-                <li>
-                    <a href="./login.html">LOGIN</a>
-                </li>
-                <li>
-                    <a href="./cadastro.html">CADASTRAR</a>
-                </li>
-            </ul> <!--.navbar-->
-                
-        </div> <!--.container-->
-    </header> <!--.header-->
+      <div class="container">
+        <div class="logo" href="index.html">
+          <div class="borda-logo">
+            <img src="./assets/imgs/logo.png" alt="" />
+            <h2>LeBrary</h2>
+          </div>
+          <!--.borda-logo-->
+        </div>
+        <!--.logo-->
+
+        <ul class="navbar">
+          <li>
+            <a href="./usuario.html">INICIO</a>
+          </li>
+          <li>
+            <a href="./index.html #sobre">LIVROS</a>
+          </li>
+          <li>
+            <a href="./contato.html">AUTORES</a>
+          </li>
+          <li>
+            <a href="./login.html">COMUNIDADE</a>
+          </li>
+          <li>
+            <a href="./login.html" onclick="limparSessao()">SAIR</a>
+          </li>
+        </ul>
+        <!--.navbar-->
+      </div>
+      <!--.container-->
+    </header>
+    <!--.header-->
 
     <div class="caroussel">
-        <div class="fundo-caroussel">
-            <span class="library">O LOCAL SEGURO PARA SUA IMAGINAÇÃO...</span>
-          <img class="slides" src="./assets/imgs/carroussel_1.jpg">
-          <img class="slides" src="./assets/imgs/carroussel_2.jpg">
-          <img class="slides" src="./assets/imgs/carroussel_3.jpg">
-          <img class="slides" src="./assets/imgs/carroussel_4.jpg">
-        </div>
+      <div class="fundo-caroussel">
+        <span class="library">O LOCAL SEGURO PARA SUA IMAGINAÇÃO...</span>
+        <img class="slides" src="./assets/imgs/carroussel_1.jpg" />
+        <img class="slides" src="./assets/imgs/carroussel_2.jpg" />
+        <img class="slides" src="./assets/imgs/carroussel_3.jpg" />
+        <img class="slides" src="./assets/imgs/carroussel_4.jpg" />
+      </div>
     </div>
 
-<div class="total-cards">
-    <div class="agroup">
+    <div class="total-cards">
+      <div class="agroup">
         <div class="line"></div>
         <h1>LIVROS</h1>
         <div class="line"></div>
-    </div>
-    <div class="cards">
-        <div class="container">
-          <div class="card card-1">
-            <div class="img-card">
-              <a href=""> <img src="https://www.salaliteraria.com.br/wp-content/uploads/2016/04/Capa_Como-eu-era-antes-de-voce2.jpg" alt=""></a>
-            </div>
-          </div>
-  
-          <div class="card card-2">
-            <div class="img-card">
-              <a href="">           
-                <img src="https://images-na.ssl-images-amazon.com/images/I/81htmSSRhXL.jpg" alt="">
-              </a>
-            </div>
-          </div>
-  
-          <div class="card card-3">
-            <div class="img-card">
-              <a href="">              
-                <img src="https://images-na.ssl-images-amazon.com/images/I/71ps3x0cJ9L.jpg" alt="">
-              </a>
-            </div>
-          </div>
-  
-          <div class="card card-4">
-            <div class="img-card">
-              <a href="">              
-                <img src="https://images-na.ssl-images-amazon.com/images/I/71Tn+WdqilL.jpg" alt="">
-              </a>
-            </div>
-          </div>
-  
-          <div class="card card-5">
-            <div class="img-card">
-              <a href="">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/712uY3hjabL.jpg" alt="">
-              </a>
-            </div>
-          </div>
-        </div>
-    </div>
-    <div class="line"></div>
-    <div class="cards">
+      </div>
+      <div class="cards">
         <div class="container">
           <div class="card card-1">
             <div class="img-card">
               <a href="">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/71aS13e+OYL.jpg" alt="">
-              </a>
+                <img
+                  src="https://www.salaliteraria.com.br/wp-content/uploads/2016/04/Capa_Como-eu-era-antes-de-voce2.jpg"
+                  alt=""
+              /></a>
             </div>
           </div>
-  
+
           <div class="card card-2">
             <div class="img-card">
               <a href="">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/61oIS8ewc9L.jpg" alt="">
+                <img
+                  src="https://images-na.ssl-images-amazon.com/images/I/81htmSSRhXL.jpg"
+                  alt=""
+                />
               </a>
             </div>
           </div>
-  
+
           <div class="card card-3">
             <div class="img-card">
               <a href="">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/51-ki8g+Q0L.jpg" alt="">
+                <img
+                  src="https://images-na.ssl-images-amazon.com/images/I/71ps3x0cJ9L.jpg"
+                  alt=""
+                />
               </a>
             </div>
           </div>
-  
+
           <div class="card card-4">
             <div class="img-card">
               <a href="">
-                <img src="https://m.media-amazon.com/images/I/410j9F8XsUL.jpg" alt="">
+                <img
+                  src="https://images-na.ssl-images-amazon.com/images/I/71Tn+WdqilL.jpg"
+                  alt=""
+                />
               </a>
             </div>
           </div>
-  
+
           <div class="card card-5">
             <div class="img-card">
               <a href="">
-                <img src="https://lojasaraiva.vteximg.com.br/arquivos/ids/6993791/780220.jpg?v=637075499365830000" alt="">
+                <img
+                  src="https://images-na.ssl-images-amazon.com/images/I/712uY3hjabL.jpg"
+                  alt=""
+                />
               </a>
             </div>
           </div>
         </div>
       </div>
-    <div class="btn-lateral">
-      <a href="">Ver Mais...</a>
-    </div>
-</div>
-
-<div class="total-autores">
-        <div class="agroup">
-            <div class="line"></div>
-            <h1>AUTORES</h1>
-            <div class="line"></div>
-        </div>
+      <div class="line"></div>
+      <div class="cards">
         <div class="container">
-            <div class="agrupar">
-                <div class="autores">
-                  <a href="">
-                    <img class="img-autor" src="https://pliki.lubimyczytac.pl/2020_aktualnosci/07_lipiec/01/harrypotter/JKRowling_Photo.jpg" alt="">
-                  </a>
-                </div>
-                <h2>J.K. Rowling</h2>
+          <div class="card card-1">
+            <div class="img-card">
+              <a href="">
+                <img
+                  src="https://images-na.ssl-images-amazon.com/images/I/71aS13e+OYL.jpg"
+                  alt=""
+                />
+              </a>
             </div>
-            <div class="agrupar">
-                <div class="autores">
-                  <a href="">
-                    <img class="img-autor" src="https://www.ofuxico.com.br/img/galeria/2015/10/286171.jpg" alt="">
-                  </a>
-                </div>
-                <h2>Nicholas Sparks</h2>
-            </div>
-            <div class="agrupar">
-                <div class="autores">
-                  <a href="./autor_rick_riordan.html">
-                    <img class="img-autor" src="https://festivalteen.com.br/wp-content/uploads/2021/01/Rick_Riordan.jpg" alt="">
-                  </a>
-                </div>
-                <h2>Rick Riordan</h2>
-            </div>
-            <div class="agrupar">
-                <div class="autores">
-                  <a href="">
-                    <img class="img-autor" src="https://onfairy.files.wordpress.com/2020/01/christophertolkien_valinor-entrevista.jpg" alt="">
-                  </a>
-                </div>
-                <h2>J.R.R. Tolkien</h2>
-            </div>
-            <div class="agrupar">
-                <div class="autores">
-                    <a href="">
-                      <img class="img-autor" src="https://www.norli.no/media/wysiwyg/Moyes_ny_476.jpg" alt="">
-                    </a>
-                </div>
-                <h2>Jojo Moyes</h2>
-            </div>
-        </div>
-</div>
+          </div>
 
+          <div class="card card-2">
+            <div class="img-card">
+              <a href="">
+                <img
+                  src="https://images-na.ssl-images-amazon.com/images/I/61oIS8ewc9L.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
+          </div>
+
+          <div class="card card-3">
+            <div class="img-card">
+              <a href="">
+                <img
+                  src="https://images-na.ssl-images-amazon.com/images/I/51-ki8g+Q0L.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
+          </div>
+
+          <div class="card card-4">
+            <div class="img-card">
+              <a href="">
+                <img
+                  src="https://m.media-amazon.com/images/I/410j9F8XsUL.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
+          </div>
+
+          <div class="card card-5">
+            <div class="img-card">
+              <a href="">
+                <img
+                  src="https://lojasaraiva.vteximg.com.br/arquivos/ids/6993791/780220.jpg?v=637075499365830000"
+                  alt=""
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="btn-lateral">
+        <a href="">Ver Mais...</a>
+      </div>
+    </div>
+
+    <div class="total-autores">
+      <div class="agroup">
+        <div class="line"></div>
+        <h1>AUTORES</h1>
+        <div class="line"></div>
+      </div>
+      <div class="container">
+        <div class="agrupar">
+          <div class="autores">
+            <a href="">
+              <img
+                class="img-autor"
+                src="https://pliki.lubimyczytac.pl/2020_aktualnosci/07_lipiec/01/harrypotter/JKRowling_Photo.jpg"
+                alt=""
+              />
+            </a>
+          </div>
+          <h2>J.K. Rowling</h2>
+        </div>
+        <div class="agrupar">
+          <div class="autores">
+            <a href="">
+              <img
+                class="img-autor"
+                src="https://www.ofuxico.com.br/img/galeria/2015/10/286171.jpg"
+                alt=""
+              />
+            </a>
+          </div>
+          <h2>Nicholas Sparks</h2>
+        </div>
+        <div class="agrupar">
+          <div class="autores">
+            <a href="./autor_rick_riordan.html">
+              <img
+                class="img-autor"
+                src="https://festivalteen.com.br/wp-content/uploads/2021/01/Rick_Riordan.jpg"
+                alt=""
+              />
+            </a>
+          </div>
+          <h2>Rick Riordan</h2>
+        </div>
+        <div class="agrupar">
+          <div class="autores">
+            <a href="">
+              <img
+                class="img-autor"
+                src="https://onfairy.files.wordpress.com/2020/01/christophertolkien_valinor-entrevista.jpg"
+                alt=""
+              />
+            </a>
+          </div>
+          <h2>J.R.R. Tolkien</h2>
+        </div>
+        <div class="agrupar">
+          <div class="autores">
+            <a href="">
+              <img
+                class="img-autor"
+                src="https://www.norli.no/media/wysiwyg/Moyes_ny_476.jpg"
+                alt=""
+              />
+            </a>
+          </div>
+          <h2>Jojo Moyes</h2>
+        </div>
+      </div>
+    </div>
 
     <div class="footer">
-        <div class="borda-footer">
-            <div class="redes-sociais">
-                <img src="./assets/imgs/facebook.png" alt="">
-                <img src="./assets/imgs/icon-instagram.png" alt="">
-                <img src="./assets/imgs/icon-linkedIn.png" alt="">
-                <img src="./assets/imgs/github.png" alt="">
-            </div> <!--.redes-sociais-->
-            <div class="copy">
-                <h4>Feito por Letícia Marques &copy;</h4>
-            </div><!--.copy-->
-        </div> <!--.borda-footer-->
-    </div> <!--.footer-->
-</body>
+      <div class="borda-footer">
+        <div class="redes-sociais">
+          <img src="./assets/imgs/facebook.png" alt="" />
+          <img src="./assets/imgs/icon-instagram.png" alt="" />
+          <img src="./assets/imgs/icon-linkedIn.png" alt="" />
+          <img src="./assets/imgs/github.png" alt="" />
+        </div>
+        <!--.redes-sociais-->
+        <div class="copy">
+          <h4>Feito por Letícia Marques &copy;</h4>
+        </div>
+        <!--.copy-->
+      </div>
+      <!--.borda-footer-->
+    </div>
+    <!--.footer-->
+  </body>
 </html>
 
 <script>
-    var slideIndex = 0;
+  var slideIndex = 0;
   carousel();
-  
   function carousel() {
     var imgs = document.getElementsByClassName("slides");
-        for (var i = 0; i < imgs.length; i++) {
-        imgs[i].style.display = "none";
-        }
+    for (var i = 0; i < imgs.length; i++) {
+      imgs[i].style.display = "none";
+    }
     slideIndex++;
-    if (slideIndex > imgs.length) {slideIndex = 1}
-    imgs[slideIndex-1].style.display = "block";
-    setTimeout(carousel, 2000); // Change image every 2 seconds
+    if (slideIndex > imgs.length) {
+      slideIndex = 1;
+    }
+    imgs[slideIndex -1].style.display = "block";
+    setTimeout(carousel, 1500); // Change image every 2 seconds
   }
-  </script>
+</script>

@@ -587,7 +587,7 @@ button {
   border: none;
 }
 
-.inicio-autor .container .autores .curtir button {
+.inicio-autor .container .autores .curtir .like {
   padding: 0;
   margin: 0;
   background: transparent;
@@ -599,23 +599,59 @@ button {
   height: 47px;
   transition: 250ms;
   outline: none;
+  box-shadow: none;
+  opacity: 0.8;
 }
 
-.inicio-autor .container .autores .curtir button:hover {
-  transition: 250ms;
+.inicio-autor .container .autores .curtir .like:hover {
   background-image: url(../assets/imgs/coracao-rosa.png);
 }
 
-.inicio-autor .container .autores .curtir button.active {
-  background-image: none;
+.inicio-autor .container .autores .curtir .leaves:focus{
+  background-image: url(../assets/imgs/coracao-rosa-preenchido.png);
+  transition: 250ms;
+  animation: leaves 2s;
 }
 
-.inicio-autor .container .autores .curtir button:not(.active) > svg {
-  display: none;
+ .leaves {
+  background: url(../assets/imgs/coracao-rosa-preenchido.png) center no-repeat;
+  transition: 250ms;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  border: none !important; 
+  padding: 0;
+  background-size: 46px;
+  width: 47px;
+  height: 47px;
+  transition: 250ms;
+  outline: none;
+  box-shadow: none;
+  opacity: 0.8;
 }
 
-.inicio-autor .container .autores .curtir button.active > svg {
-  display: block;
+.preencher {
+  background-image: url(../assets/imgs/coracao-rosa-preenchido.png) !important;
+}
+
+@keyframes leaves{
+  0% {
+      transform: scale(1.0);
+      -webkit-transform: scale(1.0);
+  }
+  50% {
+      transform: scale(1.2);
+      -webkit-transform: scale(1.2);
+  }
+  100% {
+      transform: scale(1.0);
+      -webkit-transform: scale(1.0);
+  }
+}
+
+.inicio-autor .container .autores .curtir #coracao_like .leaves {
+  animation: leaves 3s ease-in-out infinite alternate;
+  -webkit-animation: leaves 3s ease-in-out infinite alternate;
 }
 
 .inicio-autor .container .nome-autor {
@@ -657,6 +693,14 @@ button {
 }
 
 /*Fim da página do autor*/
+
+/*----------------------------------------------------------------------------------------------------*/
+
+/*Página de livro*/
+
+
+
+/*Fim página de livro*/
 
 /*----------------------------------------------------------------------------------------------------*/
 
