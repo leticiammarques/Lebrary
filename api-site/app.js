@@ -12,17 +12,19 @@ var indexRouter = require("./src/routes/index");
 var usuarioRouter = require("./src/routes/usuarios");
 var avisosRouter = require("./src/routes/avisos");
 var medidasRouter = require("./src/routes/medidas");
+var likeRouter = require("./src/routes/like")
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
-
 app.use(cors());
 
 app.use("/", indexRouter);
 app.use("/usuarios", usuarioRouter);
 app.use("/avisos", avisosRouter);
 app.use("/medidas", medidasRouter)
+app.use("/like", likeRouter)
+
 
 app.listen(PORTA, function () {
     console.log(`Servidor do site está rodando rodando: http://localhost:${PORTA} \n
