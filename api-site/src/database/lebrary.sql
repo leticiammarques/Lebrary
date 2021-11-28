@@ -70,3 +70,15 @@ select * from livros;
 select * from usuario;
 select * from seguir;
 select * from curtida;
+
+select livros.capas as capas,
+	livros.nomeLivro as livros,
+		count(curtida.curtida) as likes,
+			autor.nomeAutor as autor
+				from curtida
+					inner join livros
+						on fkLivro = idLivro
+							inner join autor
+								on fkAutor = idAutor
+									group by idLivro
+										order by likes desc;
