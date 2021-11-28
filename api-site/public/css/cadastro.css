@@ -9,6 +9,27 @@
 }
 
 /*Pesonalizações Gerais*/
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-pink) var(--color-pink-ligth);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--color-pink-ligth);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--color-pink);
+  border-radius: 20px;
+  border: 3px solid var(--color-pink-ligth);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -580,18 +601,18 @@ button {
   border-radius: 10px;
 }
 
-.inicio-autor .container .autores .img-autor{
+.autores .img-autor{
   width: 95%;
   border-radius: 10px;
 }
 
-.inicio-autor .container .autores .curtir {
+.autores .curtir {
   padding: 0;
   background: none;
   border: none;
 }
 
-.inicio-autor .container .autores .curtir .like {
+.autores .curtir .like {
   padding: 0;
   margin: 0;
   background: transparent;
@@ -607,11 +628,11 @@ button {
   opacity: 0.8;
 }
 
-.inicio-autor .container .autores .curtir .like:hover {
+.autores .curtir .like:hover {
   background-image: url(../assets/imgs/coracao-rosa.png);
 }
 
-.inicio-autor .container .autores .curtir .leaves:focus{
+.autores .curtir .leaves:focus{
   background-image: url(../assets/imgs/coracao-rosa-preenchido.png);
   transition: 250ms;
   animation: leaves 2s;
@@ -653,7 +674,7 @@ button {
   }
 }
 
-.inicio-autor .container .autores .curtir #coracao_like .leaves {
+.autores .curtir #coracao_like .leaves {
   animation: leaves 3s ease-in-out infinite alternate;
   -webkit-animation: leaves 3s ease-in-out infinite alternate;
 }
@@ -711,9 +732,179 @@ button {
 
 /*Página de livro*/
 
+.inicio-livro {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-bottom: 60px;
+}
 
+.inicio-livro .container {
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  background-color: var(--color-purple-ligth);
+  border-radius: 10px;
+  color: var(--color-purple);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+.inicio-livro .container .livros {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 90%;
+  height: 100vh;
+  border-radius: 10px;
+}
+
+.inicio-livro .container .livros section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.inicio-livro .container .livros section .book {
+  position: relative;
+  width: 383px;
+  height: 567px;
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
+  transform-style: preserve-3d;
+  transition: 0.5;
+}
+
+.inicio-livro .container .livros section .book:hover {
+  transform: rotateY(35deg);
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2);
+}
+
+.inicio-livro .container .livros section .book:active {
+  transform: rotateY(180deg);
+}
+
+.inicio-livro .container .livros section .book:before {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 100%;
+  transform-origin: left;
+  background: url(../assets/imgs/side.jpg);
+  background-position: center;
+  transform: rotateY(90deg);
+}
+
+.inicio-livro .container .livros section .book:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  background: url(../assets/imgs/back.jpg);
+  background-position: center;
+  transform: rotateY(180deg) translateZ(60px);
+}
+
+.inicio-livro .container .livros section .book img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.inicio-livro .area-explicacao {
+  width: 50%;
+  color: var(--color-ligth);
+  padding: 30px;
+  text-align: justify;
+  border-radius: 10px;
+  background-color: var(--color-purple);
+}
+
+.inicio-livro .area-explicacao .autores .curtir {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  width: 50%;
+}
+
+.area-livro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 80vh;
+  color: var(--color-purple);
+
+}
+
+.area-livro .fundo-cap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 90%;
+  height: 80vh;
+  border-radius: 10px 10px 0 0;
+  background-color: var(--color-purple-ligth);
+}
+
+.area-livro .cap-livro {
+  display: flex;
+  text-align: justify;
+  width: 95%;
+  height: 70%;
+  overflow: scroll;
+  overflow-x: hidden;
+}
 
 /*Fim página de livro*/
+
+/*----------------------------------------------------------------------------------------------------*/
+
+/*Página de Ranking*/
+
+.ranking {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.ranking .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 90%;
+  height: 100%;
+}
+
+.ranking .container .cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  width: 50%;
+  background-color: var(--color-pink);
+  height: 115px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+}
+
+.ranking .container .cards img {
+  width: 70px;
+}
+
+/*Fim da página de Ranking*/
 
 /*----------------------------------------------------------------------------------------------------*/
 

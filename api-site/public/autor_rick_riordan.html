@@ -35,7 +35,7 @@
                 <a href="./contato.html">AUTORES</a>
               </li>
               <li>
-                <a href="./login.html">COMUNIDADE</a>
+                <a href="./ranking.html">COMUNIDADE</a>
               </li>
               <li>
                 <a href="./login.html" onclick="limparSessao()">SAIR</a>
@@ -85,13 +85,17 @@
                 <div class="container">
                   <div class="card card-1">
                     <div class="img-card">
-                      <img src="https://images-na.ssl-images-amazon.com/images/I/51prOSSk2YL._SX332_BO1,204,203,200_.jpg" alt="">
+                      <a href="./livro_ladrao_de_raios.html">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/51prOSSk2YL._SX332_BO1,204,203,200_.jpg" alt="">
+                      </a>
                     </div>
                   </div>
           
                   <div class="card card-2">
                     <div class="img-card">
-                      <img src="https://images-na.ssl-images-amazon.com/images/I/91c3vlY3PvL.jpg" alt="">
+                      <a href="./livro_mar_de_monstros.html">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/91c3vlY3PvL.jpg" alt="">
+                      </a>
                     </div>
                   </div>
           
@@ -344,72 +348,7 @@
 </body>
 </html>
 
-<script>
-
-//  var btn = document.querySelector("#coracao_like");
-
-//  btn.onclick   = function(){
-//   coracao_like.classList.toggle("leaves")
-//  }
-  function puxar_like(idAutor) {
-    var btn = document.getElementById("coracao_like");
-    btn.classList.add('preencher');
-    console.log(btn);
-
-
-  
-    var idUsuario = sessionStorage.ID_USUARIO;
-
-    
-      fetch(`/like/cadastrar/${idUsuario}`, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                   idAutor: idAutor,
-               
-            })
-        }).then(function (resposta) {
-
-            if (resposta.status == 406) {
-                alert('vc ja curtiu')
-            }
-
-            // console.log("resposta: ", resposta);
-            resposta.json().then((json) => {
-                var obj = (json);
-                console.log(obj)
-            }).catch((erro) => {
-
-            })
-
-        }).catch(function (resposta) {
-            if (resposta.status == 406) {
-                alert('vc ja curtiu')
-            }
-            console.log(`#ERRO:${resposta}`);
-
-        });
-    
-
-
-    
-    // var possuiPreencher = false;
-    // for (var i = 0; i < btn.classList.length; i++) {
-    //   var classe = btn.classList[i];
-    //   console.log(classe); 
-    //   if (classe == "preencher") {
-    //     possuiPreencher = true;
-    //   }
-    // }
-    // if (possuiPreencher == true) {
-    //   btn.classList.remove("preencher");
-    // } else {
-    //   btn.classList.add("preencher");
-    // }
-  }
-</script>
+<script src="./js/curtidas_livros.js"></script>
 
    <!-- document.getElementById("coracao_like").addEventListener("click", function() {
     document.getElementById("coracao_like").addClass("SUA-CLASSE-EM-QUE-CRIOU-A-ANIMACAO");

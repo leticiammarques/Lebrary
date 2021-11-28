@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="./js/funcoes.js"></script>
+
+    <link rel="stylesheet" href="./css/cadastro.css">
+    <link rel="shortcut icon" href="./assets/imgs/flavicon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+</head>
+<body onload="validarSessao(), atualizarFeed()">
+    <header id="header" class="header">
+        <div class="container">
+    
+            <div class="logo" href="index.html">
+                <div class="borda-logo">
+                    <img src="./assets/imgs/logo.png" alt="">
+                    <h2>LeBrary</h2>
+                </div> 
+            </div> 
+    
+            <ul class="navbar">
+              <li>
+                <a href="./usuario.html">INICIO</a>
+              </li>
+              <li>
+                <a href="./index.html #sobre">LIVROS</a>
+              </li>
+              <li>
+                <a href="./contato.html">AUTORES</a>
+              </li>
+              <li>
+                <a href="./login.html">COMUNIDADE</a>
+              </li>
+              <li>
+                <a href="./login.html" onclick="limparSessao()">SAIR</a>
+              </li>
+            </ul>
+                
+        </div> 
+    </header>
+    
+    
+    <div class="fundo-header"></div>
+        <div class="ranking">
+            <div class="container" id="rank">
+                                                  
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="borda-footer">
+                <div class="redes-sociais">
+                    <img src="./assets/imgs/facebook.png" alt="">
+                    <img src="./assets/imgs/icon-instagram.png" alt="">
+                    <img src="./assets/imgs/icon-linkedIn.png" alt="">
+                    <img src="./assets/imgs/github.png" alt="">
+                </div>
+                <div class="copy">
+                    <h4>Feito por Letícia Marques &copy;</h4>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
+
+<script src="./js/curtidas_livros.js"></script>
+

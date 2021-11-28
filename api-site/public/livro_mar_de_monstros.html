@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Ladrão de Raios | Lebrary</title>
+
+    <script src="./js/funcoes.js"></script>
+
+    <link rel="stylesheet" href="./css/cadastro.css">
+    <link rel="shortcut icon" href="./assets/imgs/flavicon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+</head>
+<body onload="validarSessao(), atualizarFeed()">
+        
+  <header id="header" class="header">
+    <div class="container">
+
+        <div class="logo" href="index.html">
+            <div class="borda-logo">
+                <img src="./assets/imgs/logo.png" alt="">
+                <h2>LeBrary</h2>
+            </div> 
+        </div> 
+
+        <ul class="navbar">
+          <li>
+            <a href="./usuario.html">INICIO</a>
+          </li>
+          <li>
+            <a href="./index.html #sobre">LIVROS</a>
+          </li>
+          <li>
+            <a href="./contato.html">AUTORES</a>
+          </li>
+          <li>
+            <a href="./ranking.html">COMUNIDADE</a>
+          </li>
+          <li>
+            <a href="./login.html" onclick="limparSessao()">SAIR</a>
+          </li>
+        </ul>
+            
+    </div> 
+</header>
+
+<div class="fundo-header"></div>
+
+<div class="inicio-livro">
+    <div class="container">
+        <div class="livros">
+            <section>
+                <div class="book">
+                    <img src="./assets/imgs/cover.jpg" alt="">
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="area-explicacao">
+        <div class="text-explicacao">
+            <p>
+                A série Percy Jackson e os Olimpianos envolve a mitologia grega em aventuras no século XXI. 
+                Nelas, os deuses do Olimpo continuam vivos, ainda se apaixonam por mortais e geram filhos 
+                metade deuses, metade humanos, os chamados meios-sangues. Marcados pelo destino, eles 
+                dificilmente passam da adolescência. Poucos conseguem descobrir sua verdadeira identidade.
+            </p>
+            <p>
+                O garoto-problema Percy Jackson é um deles. Tem experiências estranhas em que deuses e monstros
+                 mitológicos parecem saltar das páginas dos livros direto para a sua vida. Pior que isso: algumas
+                  dessas criaturas estão bastante irritadas. O raio-mestre de Zeus foi roubado do Monte Olimpo e 
+                  Percy é o principal suspeito. Para restaurar a paz, ele, Annabeth e Grover terão de fazer mais do
+                   que capturar o verdadeiro ladrão: precisam elucidar uma traição mais ameaçadora que a fúria dos deuses.
+            </p>
+        </div>
+        <div class="autores">
+            <div class="curtir">
+                <button onclick="puxar_like_livro(2)" type="button" class="like leaves" id="coracao_like"></button>
+                <h2>Favoritar Livro</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="area-livro">
+    <div class="fundo-cap">
+        <h1>LEIA O PRIMEIRO CAPÍTULO GRATUITAMENTE</h1>
+        <div class="cap-livro">
+            <p>
+                &nbsp &nbsp &nbsp Olhe, eu não queria ser um meio-sangue. <br>
+                &nbsp &nbsp &nbsp Se você está lendo isto porque acha que pode ser um, meu conselho é o seguinte: feche este 
+                livro agora mesmo. Acredite em qualquer mentira que sua mãe ou seu pai lhe contou sobre seu nascimento, e tente levar uma vida normal. <br>
+                &nbsp &nbsp &nbsp Ser meio-sangue é perigoso. É assustador. Na maioria das vezes, acaba com a gente de um jeito penoso e detestável. <br>
+                &nbsp &nbsp &nbsp Se você é uma criança normal, que está lendo isto porque acha que é ficção, ótimo. Continue lendo. Eu o invejo por ser capaz de acreditar
+                 que nada disso aconteceu. Mas, se você se reconhecer nestas páginas – se sentir alguma coisa emocionante lá dentro – pare de ler imediatamente.
+                  Você pode ser um de nós. E, uma vez que fica sabendo disso, é apenas uma questão de tempo antes que eles também sintam isso, e venham atrás de você. <br>
+                &nbsp &nbsp &nbsp Não diga que eu não avisei. <br>
+                &nbsp &nbsp &nbsp Meu nome é Percy Jackson. <br>
+                &nbsp &nbsp &nbsp Tenho doze anos de idade. Até alguns meses atrás, era aluno de um internato, a Academia Yancy, uma escola particular para crianças problemáticas no norte do estado de Nova York. <br>
+                &nbsp &nbsp &nbsp Se eu sou uma criança problemática? Sim. Pode-se dizer isso. <br>
+                &nbsp &nbsp &nbsp Eu poderia partir de qualquer ponto da minha vida curta e infeliz para prová-lo, mas as coisas começaram a ir realmente mal no último mês de maio, quando nossa turma do sexto ano 
+                fez uma excursão a Manhattan – vinte e oito crianças alucinadas e dois professores em um ônibus escolar amarelo indo para o Museu Metropolitano de Arte, a fim de observar velharias gregas e romanas. <br>
+                &nbsp &nbsp &nbsp Eu sei, parece tortura. A maior parte das excursões da Yancy era mesmo. Mas o Sr. Brunner, nosso professor de latim, estava guiando essa excursão, assim eu tinha esperanças. <br>
+                &nbsp &nbsp &nbsp O Sr. Brunner era um sujeito de meia-idade em uma cadeira de rodas motorizada. Tinha o cabelo ralo, uma barba desalinhada e usava um casaco surrado de tweed que sempre cheirava a café. 
+                Talvez você não o achasse legal, mas ele contava histórias e piadas e nos deixava fazer brincadeiras em sala. Também tinha uma impressionante coleção de armaduras e armas romanas, portanto era o único professor cuja aula não me fazia dormir. <br>
+                &nbsp &nbsp &nbsp Eu esperava que desse tudo certo na excursão. Pelo menos tinha esperança de não me meter em encrenca dessa vez. <br>
+                &nbsp &nbsp &nbsp Cara, como eu estava errado. <br>
+                &nbsp &nbsp &nbsp Entenda: coisas ruins me acontecem em excursões escolares. Como na minha escola da quinta série, quando fomos para o campo de batalha de Saratoga, e eu tive aquele acidente com um canhão da Revolução Americana. 
+                Eu não estava apontando para o ônibus da escola, mas é claro que fui expulso do mesmo jeito. <br>
+                &nbsp &nbsp &nbsp E antes disso, na escola da quarta série, quando fizemos um passeio pelos bastidores do tanque dos tubarões do Mundo Marinho, e eu de, alguma forma, acionei a alavanca errada no passadiço e nossa turma tomou um banho inesperado. 
+                E antes disso... Bem, já dá para você ter uma ideia. <br>
+                &nbsp &nbsp &nbsp Nessa viagem, eu estava determinado a ser bonzinho. <br>
+                &nbsp &nbsp &nbsp Ao longo de todo o caminho para a cidade aguentei Nancy Bobofit, aquela cleptomaníaca ruiva e sardenta, acertando a nuca do meu melhor amigo, Grover, com pedaços de sanduíche de manteiga de amendoim com ketchup. <br>
+                &nbsp &nbsp &nbsp Grover era um alvo fácil. Ele era magrelo. Chorava quando ficava frustrado. Devia ter repetido de ano muitas vezes, porque era o único na sexta série que tinha espinhas e uma barba rala começando a nascer no queixo. 
+                E, ainda por cima, era aleijado. Tinha um atestado que o dispensava da educação física pelo resto da vida, porque tinha algum tipo de doença muscular nas pernas. Andava de um jeito engraçado, como se cada passo doesse, 
+                mas não se deixe enganar por isso. Você precisa vê-lo correr quando é dia de enchilada na cantina. <br>
+                &nbsp &nbsp &nbsp De qualquer modo, Nancy Bobofit estava jogando bolinhas de sanduíche que grudavam no cabelo castanho cacheado dele, e ela sabia que eu não podia revidar, porque já estava sendo observado, sob o risco de ser expulso. 
+                O diretor me ameaçara de morte com uma suspensão “na escola” (ou seja, sem poder assistir às aulas, mas tendo de comparecer à escola e ficar trancado numa sala fazendo tarefas de casa) caso alguma coisa ruim, embaraçosa 
+                ou até moderadamente divertida acontecesse durante a excursão. <br>
+                &nbsp &nbsp &nbsp — Eu vou matá-la — murmurei. <br>
+                &nbsp &nbsp &nbsp Grover tentou me acalmar. <br>
+                &nbsp &nbsp &nbsp — Está tudo bem. Gosto de manteiga de amendoim. <br>
+                &nbsp &nbsp &nbsp Ele se esquivou de outro pedaço do lanche de Nancy. <br>
+                &nbsp &nbsp &nbsp — Agora chega. <br>
+                &nbsp &nbsp &nbsp Comecei a levantar, mas Grover me puxou de volta para o assento. <br>
+                &nbsp &nbsp &nbsp — Você já está sendo observado — ele me lembrou. — Sabe que será culpado se acontecer alguma coisa. <br>
+                <br>
+                &nbsp &nbsp &nbsp Quando ele me lembrou daquilo, eu preferia ter acertado Nancy Bobofit no ato. A suspensão na escola não teria sido nada em comparação com a encrenca que eu estava prestes a me meter. <br>
+                &nbsp &nbsp &nbsp O Sr. Brunner guiou o passeio pelo museu. <br>
+                &nbsp &nbsp &nbsp Ele foi na frente em sua cadeira de rodas, conduzindo-nos pelas grandes galerias cheias de ecos, passando por estátuas de mármore e caixas de vidro repletas de cerâmica preta e laranja muito velhas. <br>
+                &nbsp &nbsp &nbsp Eu ficava alucinado só de pensar que aquelas coisas tinham sobrevivido por dois mil, três mil anos. <br>
+                &nbsp &nbsp &nbsp Ele nos reuniu em volta de uma coluna de pedra com quatro metros de altura e uma grande esfinge no topo, e começou a explicar que aquilo era um marco tumular, uma estela, feita para uma menina mais ou menos da nossa idade. 
+                Contou-nos sobre as inscrições laterais. Eu estava tentando ouvir o que ele tinha a dizer, porque era um pouco interessante, mas todos ao meu redor estavam falando, e cada vez que eu dizia para calarem a boca, a outra professora 
+                que nos acompanhava, a Sra. Dodds, me olhava de cara feia. <br>
+                &nbsp &nbsp &nbsp A Sra. Dodds era aquela professorinha de matemática da Geórgia que sempre usava um casaco de couro preto, apesar de ter cinquenta anos de idade. Parecia má o bastante para entrar com uma moto Harley bem dentro do seu armário. 
+                Tinha chegado em Yancy no meio do ano, quando nossa última professora de matemática teve um colapso nervoso. <br>
+                &nbsp &nbsp &nbsp Desde o primeiro dia, a Sra. Dodds adorou Nancy Bobofit e concluiu que eu tinha sido gerado pelo diabo. Ela me apontava o dedo torto e dizia: “Agora, meu bem”, com a maior doçura, e eu sabia que ia ficar detido depois da aula por um mês. <br>
+                &nbsp &nbsp &nbsp Certa vez, depois que ela me fez apagar as respostas em antigos livros de exercícios de matemática até  a meia-noite, eu disse a Grover que achava que a Sra. Dodds não era gente. Ele olhou para mim, muito sério, e disse: <br>
+                &nbsp &nbsp &nbsp — Você está certíssimo. <br>
+                &nbsp &nbsp &nbsp O Sr. Brunner continuou falando sobre arte funerária grega. <br>
+                &nbsp &nbsp &nbsp Finalmente, Nancy Bobofit, abafando o riso, falou algo sobre o sujeito pelado na estela, e eu me virei e disse: <br>
+                &nbsp &nbsp &nbsp — Quer calar a boca? <br>
+                &nbsp &nbsp &nbsp Saiu mais alto do que eu pretendia. <br>
+                &nbsp &nbsp &nbsp O grupo inteiro deu risada. O Sr. Brunner interrompeu seu história. <br>
+                &nbsp &nbsp &nbsp — Sr. Jackson — disse ele — fez algum comentário? <br>
+                &nbsp &nbsp &nbsp Meu rosto estava completamente vermelho. <br>
+                &nbsp &nbsp &nbsp — Não, senhor. <br>
+                &nbsp &nbsp &nbsp O Sr. Brunner apontou para uma das figuras na estela. <br>
+                &nbsp &nbsp &nbsp — Talvez possa nos dizer o que esta figura representa. <br>
+                &nbsp &nbsp &nbsp Olhei para a imagem entalhada e senti uma onda de alívio, porque de fato a reconhecera. <br>
+                &nbsp &nbsp &nbsp — É Cronos comendo os filhos, certo? <br>
+                &nbsp &nbsp &nbsp — Sim — disse o Sr. Brunner, e obviamente não estava satisfeito. — E ele fez isso porque... <br>
+                &nbsp &nbsp &nbsp — Bem... — eu quebrei a cabeça para me lembrar. — Cronos era o deus-rei e... <br>
+                &nbsp &nbsp &nbsp — Deus-rei? — perguntou o Sr. Brunner. <br>
+                &nbsp &nbsp &nbsp — Titã — eu me corrigi. — E... ele não confiava nos filhos, que eram os deuses. Então, hum, Cronos os comeu, certo? Mas sua esposa escondeu o bebê Zeus e deu a Cronos uma pedra para comer no lugar dele. E depois, 
+                quando Zeus cresceu, ele enganou o pai, Cronos, e o fez vomitar seus irmãos e irmãs. <br>
+                &nbsp &nbsp &nbsp — Eca! — disse uma das meninas atrás de mim. <br>
+                &nbsp &nbsp &nbsp — ...e então houve aquela grande briga entre os deuses e os titãs — continuei — e os deuses venceram. <br>
+                &nbsp &nbsp &nbsp Algumas risadinhas do grupo. <br>
+                &nbsp &nbsp &nbsp Atrás de mim, Nancy Bobofit murmurou para uma amiga: <br>
+                &nbsp &nbsp &nbsp — Como se fôssemos usar isso na vida real. Como se fossem falar nas nossas entrevistas de emprego: “Por favor explique por que Cronos comeu seus filhos.” <br>
+                &nbsp &nbsp &nbsp — E por que, Sr. Jackson — disse o Sr. Brunner — parafraseando a excelente pergunta da Srta. Bobofit, isso importa na vida real? <br>
+                &nbsp &nbsp &nbsp — Se ferrou — murmurou Grover. <br>
+                &nbsp &nbsp &nbsp — Cala a boca — chiou Nancy, a cara ainda mais vermelha que seu cabelo. <br>
+                &nbsp &nbsp &nbsp Pelo menos Nancy também foi enquadrada. O Sr. Brunner era o único que a pegava dizendo algo errado. Tinha ouvidos de radar. <br>
+                &nbsp &nbsp &nbsp Pensei na pergunta dele, e encolhi os ombros. <br>
+                &nbsp &nbsp &nbsp — Não sei, senhor. <br>
+                &nbsp &nbsp &nbsp — Entendo. — O Sr. Brunner pareceu desapontado. — Bem, meio ponto, Sr. Jackson. Zeus, na verdade, deu a Cronos uma mistura de mostarda e vinho, o que o fez vomitar as outras cinco crianças, que, é claro, sendo deuses imortais, 
+                estavam vivendo e crescendo sem serem digeridas no estômago do titã. Os deuses derrotaram o pai deles, cortando-o em pedaços com sua própria foice e espalharam os restos no Tártaro, a parte mais escura do Mundo Inferior. 
+                E com esse alegre comentário, é hora do almoço. Sra. Dodds, quer nos levar de volta para fora? <br>
+                &nbsp &nbsp &nbsp A turma foi retirada, as meninas segurando a barriga, os garotos empurrando uns aos outros e agindo como bobões. <br>
+                &nbsp &nbsp &nbsp Grover e eu estávamos prestes a segui-los quando o Sr. Brunner disse: <br>
+                &nbsp &nbsp &nbsp — Sr. Jackson. <br>
+                &nbsp &nbsp &nbsp Eu sabia o que vinha a seguir. <br>
+                &nbsp &nbsp &nbsp Disse a Grover para ir andando. Então me voltei para o professor. <br>
+                &nbsp &nbsp &nbsp — Senhor? <br>
+                &nbsp &nbsp &nbsp O Sr. Brunner tinha aquele olhar que não deixa a gente ir embora – olhos castanhos intensos que poderiam ter mil anos de idade e já ter visto de tudo. <br>
+                &nbsp &nbsp &nbsp — Você precisa aprender a responder à minha pergunta — disse ele. <br>
+                &nbsp &nbsp &nbsp — Sobre os titãs? <br>
+                &nbsp &nbsp &nbsp — Sobre a vida real. E como seus estudos se aplicam a ela. <br>
+                &nbsp &nbsp &nbsp — Ah. <br>
+                &nbsp &nbsp &nbsp — O que você aprende comigo — disse ele — é de uma importância vital. Espero que trate o assunto como tal. De você, aceitarei apenas o melhor, Percy Jackson. <br>
+                &nbsp &nbsp &nbsp Eu queria ficar zangado, aquele sujeito me pressionava demais. <br>
+                &nbsp &nbsp &nbsp Quer dizer, claro, era legal em dias de torneio, quando ele vestia uma armadura romana, bradava “Olé!” e nos desafiava, ponta de espada contra o giz a correr para o quadro-negro e citar pelo nome cada pessoa grega ou romana que já viveu, 
+                o nome de sua mãe e que deuses cultuavam. Mas o Sr. Brunner esperava que eu fosse tão bom quanto todos os outros a despeito do fato de que tenho dislexia e transtorno do déficit de atenção, e de que nunca na vida tirei uma nota acima de C-. 
+                Não – ele não esperava que eu fosse tão bom quanto; ele esperava que eu fosse melhor. E eu simplesmente não podia aprender todos aqueles nomes e fatos, e muito menos escrevê-los direito. <br>
+                &nbsp &nbsp &nbsp Murmurei alguma coisa sobre me esforçar mais, enquanto o Sr. Brunner lançava um olhar longo e triste para a estela, como se tivesse estado no funeral daquela menina. <br>
+                &nbsp &nbsp &nbsp Ele me disse para sair e comer meu lanche. <br>
+                A turma se reuniu nos degraus da frente do museu, de onde podíamos assistir ao trânsito de pedestres pela Quinta Avenida.
+                Acima de nós, uma imensa tempestade estava se formando, com as nuvens mais escuras que eu já tinha visto sobre a cidade. Imaginei que talvez fosse o aquecimento global ou qualquer coisa assim, porque o tempo em todo o estado de Nova York estava esquisito desde o Natal. Tivemos nevascas pesadas, inundações, incêndios nas florestas causados por raios. Eu não teria ficado surpreso se fosse um furacão chegando.
+                Ninguém mais pareceu notar. Alguns dos garotos estavam jogando biscoitos para os pombos. Nancy Bobofit tentava afanar alguma coisa da bolsa de uma senhora e, é claro, a Sra. Dodds não via nada.
+                Grover e eu nos sentamos na beirada do chafariz, longe dos outros. Pensamos que, se fizéssemos isso, talvez ninguém descobrisse que éramos daquela escola – a escola para esquisitões lesados que não davam certo em nenhum outro lugar.
+                — Detenção? — perguntou Grover.
+                — Não. Não do Brunner. Eu só gostaria que ele às vezes me desse um tempo. Quer dizer, não sou um gênio.
+                Grover não disse nada por algum tempo. Então, quando achei que ele ia me brindar com algum comentário filosófico profundo para me fazer sentir melhor, ele disse:
+                — Posso comer sua maçã?
+                Eu não estava com muito apetite, então a entreguei a ele.
+                Observei os táxis que passavam descendo a Quinta Avenida e pensei no apartamento de minha mãe, na área residencial próxima ao lugar onde estávamos sentados. Eu não a via desde o Natal. Tive muita vontade de pular em um táxi e ir para casa. Ela me abraçaria e ficaria contente de me ver, mas também ficaria desapontada. Imediatamente me mandaria de volta para Yancy e me lembraria que preciso me esforçar mais, ainda que aquela fosse minha sexta escola em seis anos e que, provavelmente, eu seria chutado para fora de novo. Não conseguiria suportar o olhar triste que ela me lançaria.
+                O Sr. Brunner estacionou a cadeira de rodas na base da rampa para deficientes. Comia aipo enquanto lia um romance. Um guarda-chuva vermelho estava enfiado nas costas da cadeira, fazendo-a parecer uma mesa de café motorizada.
+                Eu estava prestes a desembrulhar meu sanduíche quando Nancy Bobofit apareceu diante de mim com as amigas feiosas – imagino que tivesse se cansado de roubar dos turistas – e deixou seu lanche, já comido pela metade, cair no colo de Grover.
+                — Oops.
+                Ela arreganhou um sorriso para mim, com os dentes tortos. As sardas eram alaranjadas, como se alguém tivesse pintado o rosto dela com um spray de Cheetos líquido.
+                Tentei ficar calmo. O orientador da escola me dissera um milhão de vezes: “Conte até dez, controle seu gênio.” Não me lembro de ter tocado nela, mas quando dei por mim, Nancy estava sentada com o traseiro no chafariz, berrando:
+                — Percy me empurrou!
+                A Sra. Dodds se materializou ao nosso lado. Algumas das crianças estavam sussurrando:
+                — Você viu...
+                — ...a água...
+                — ...parece que a agarrou...
+                Eu não sabia do que elas estavam falando. Tudo o que sabia era que eu estava encrencado outra vez.
+                Assim que se certificou de que a pobre Nancy estava bem, prometendo dar–lhe uma blusa nova da loja de presentes do museu etc. e tal, a Sra. Dodds se voltou para mim. Havia um fogo triunfante em seus olhos, como se eu tivesse feito algo pelo ela esperara o semestre inteiro.
+                — Agora, meu bem...
+                — Eu sei — resmunguei. — Um mês apagando livros de exercícios.
+                Não foi a coisa certa para dizer.
+                — Venha comigo — disse a Sra. Dodds.
+                — Espere! — guinchou Grover. — Fui eu. Eu a empurrei.
+                Olhei para ele perplexo. Não podia acreditar que estivesse tentando me proteger. Ele morria de medo da Sra. Dodds.
+                Ela lançou um olhar tão furioso que fez o queixo dele tremer.
+                — Acho que não, Sr. Underwood — disse ela.
+                — Mas...
+                — Você... vai... ficar... aqui.
+                Grover me olhou desesperadamente,
+                — Tudo bem, cara — disse a ele. — Obrigado por tentar.
+                — Meu bem — latiu a Sra. Dodds para mim. — Agora.
+                Nancy Bobofit deu um sorriso falso.
+                Lancei-lhe meu melhor olhar de  “vou acabar com a sua raça”. Então me virei para enfrentar a Sra. Dodds, mas ela não estava lá. Estava postada à entrada do museu, lá no alto dos degraus, gesticulando impaciente para mim.
+                Como ela chegou lá tão depressa?
+                Tenho milhares de momentos desse tipo – meu cérebro adormece ou algo assim e, quando me dou conta, vejo que perdi alguma coisa, como se uma peça do quebra-cabeça desaparecesse e me deixasse olhando para o espaço vazio atrás dela. O orientador da escola me disse que isso era parte do transtorno do déficit de atenção, era meu cérebro que interpretava tudo errado.
+                Eu não tinha tanta certeza.
+                Fui atrás da Sra. Dodds.
+                No meio da escadaria, olhei para Grover lá atrás. Ele parecia pálido, movendo os olhos entre mim e o Sr. Brunner, como se quisesse que o Sr. Brunner reparasse no que estava acontecendo, mas o professor estava absorto em seu romance.
+                Voltei a olhar para cima. A Sra. Dodds desaparecera de novo. Estava agora dentro do edifício, no fim do hall de entrada.
+                Certo, pensei. Ela vai me fazer comprar uma blusa nova para Nancy na loja de presentes. Mas aparentemente não era esse o plano.
+                Eu a segui museu adentro. Quando finalmente a alcancei, estávamos de volta à seção greco-romana.
+                A não ser por nós, a galeria estava vazia.
+                A Sra. Dodds estava postada de braços cruzados na frente de um grande friso de mármore com os deuses gregos. Ela fazia um som estranho com a garganta, como um rosnado.
+                Mesmo sem o ruído, eu teria ficado nervoso. É esquisito estar sozinho com uma professora, especialmente a Sra. Dodds. Algo no modo como ela olhava para o friso, como se quisesse pulverizá-lo...
+                — Você está nos criando problemas, meu bem — disse ela.
+                Fiz o que era seguro. Disse:
+                — Sim, senhora.
+                Ela ajeitou os punhos de seu casaco de couro.
+                — Você achou mesmo que ia se safar desta?
+                A expressão em seus olhos era mais que furiosa. Era perversa. Ela é uma professora, pensei, nervoso. Não é provável que vá me machucar.
+                Eu disse:
+                — Eu... eu vou me esforçar mais, senhora.
+                Um trovão sacudiu o edifício.
+                — Nós não somos bobos, Percy Jackson — a Sra. Dodds disse. — Seria apenas uma questão de tempo até que o descobríssemos. Confesse, e você sentirá menos dor.
+                Eu não sabia do que ela estava falando.
+                Tudo o que pude pensar foi que os professores haviam descoberto o estoque ilegal de doces que eu estava vendendo no meu dormitório. Ou talvez tivessem descoberto que eu pegara meu trabalho sobre Tom Sawyer na Internet sem ter nem lido o livro, e agora iam retirar minha nota. Ou pior, iam me obrigar a ler o livro.
+                — E então? — exigiu.
+                — Senhora, eu não...
+                — O seu tempo se esgotou — sibilou ela.
+                Então algo muito estranho aconteceu. Os olhos dela começaram a brilhar como carvão de churrasco. Os dedos se esticaram, transformando-se em garras. O casaco se fundiu em grandes asas de couro. Ela não era humana. Era uma bruxa má e enrugada, com asas e garras de morcego e com uma boca repleta de presas amareladas – e estava prestes a me fazer em pedaços.
+                Então as coisas ficaram ainda mais esquisitas.
+                O Sr. Brunner, que estava na frente do museu um minuto antes, foi com a cadeira de rodas até o vão da porta da galeria, segurando uma caneta.
+                — Olá, Percy! — gritou ele, e lançou a caneta pelo ar.
+                A Sra. Dodds deu um bote para cima de mim.
+                Com um gemido agudo, eu me esquivei e senti as garras cortando o ar ao lado do meu ouvido. Agarrei a caneta esferográfica no alto, mas quando ela atingiu minha mão, já não era mais uma caneta. Era uma espada – a espada de bronze do Sr. Brunner, que ele sempre usava em dias de torneio.
+                A Sra. Dodds virou-se na minha direção com uma expressão assassina nos olhos. Meus joelhos ficaram bambos. As mãos tremiam tanto que quase deixei a espada cair.
+                Ela rosnou:
+                — Morra, meu bem!
+                E voou para cima de mim.
+                Um terror absoluto percorreu meu corpo. Fiz a única coisa que me ocorreu naturalmente: desferi um golpe com a espada.
+                A lâmina de metal atingiu o ombro dela e passou direto por seu corpo, como se ela fosse feita de água: Zás!
+                A Sra. Dodds era um castelo de areia debaixo de um ventilador. Ela explodiu em areia amarela, reduziu-se a pó, sem deixar nada do cheiro de enxofre, um grito estridente que foi sumindo e um calafrio de maldade no ar, como se aqueles olhos vermelhos incandescentes ainda estivessem me olhando.
+                Eu estava sozinho.
+                Havia uma caneta esferográfica na minha mão.
+                O Sr. Brunner não estava lá. Não havia ninguém lá além de mim.
+                Minhas mãos ainda estavam tremendo. Meu lanche devia estar contaminado com cogumelos mágicos ou coisa assim. Será que eu havia imaginado tudo aquilo?
+                Voltei para o lado de fora.
+                Tinha começado a chover.
+                Grover estava sentado junto ao chafariz com um mapa do museu formando uma tenda em cima de sua cabeça. Nancy Bobofit ainda estava lá, encharcada do banho no chafariz, resmungando para as amigas feiosas. Quando me viu, disse:
+                — Espero que a Sra. Kerr tenha chicoteado seu traseiro.
+                — Quem? — respondi.
+                — Nossa professora. Dãã!
+                Eu pisquei. Não tínhamos nenhuma professora chamada Sra. Kerr. Perguntei a Nancy de quem ela estava falando. Ela simplesmente revirou os olhos e me deu as costas.
+                Perguntei a Grover onde estava a Sra. Dodds.
+                — Quem? — respondeu ele.
+                Mas Grover primeiro fez uma pausa, e não olhou para mim, portanto, pensei que estivesse me enganando.
+                — Não tem graça, cara — disse a ele. — Isso é sério.
+                Um trovão estourou no alto.
+                Vi o Sr. Brunner sentado embaixo do guarda-chuva vermelho, lendo seu livro, como se nunca tivesse se mexido. Fui até ele. Ele ergueu os olhos, um pouco distraído.
+                — Ah, é a minha caneta. Por favor, traga seu próprio instrumento de escrita no futuro, Sr. Jackson.
+                Entreguei a caneta ao Sr. Brunner. Não tinha notado que ainda a estava segurando.
+                — Senhor — disse eu — onde está a Sra. Dodds?
+                Ele olhou para mim com a expressão vazia.
+                — Quem?
+                — A outra professora que nos acompanhava. A Sra. Dodds. Professora de iniciação à álgebra.
+                Ele franziu a testa e se inclinou para a frente, parecendo ligeiramente preocupado.
+                — Percy, não há nenhuma Sra. Dodds nesta excursão. Até onde sei, nunca houve uma Sra. Dodds na Academia Yancy. Está se sentindo bem?
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="borda-footer">
+        <div class="redes-sociais">
+            <img src="./assets/imgs/facebook.png" alt="">
+            <img src="./assets/imgs/icon-instagram.png" alt="">
+            <img src="./assets/imgs/icon-linkedIn.png" alt="">
+            <img src="./assets/imgs/github.png" alt="">
+        </div>
+        <div class="copy">
+            <h4>Feito por Letícia Marques &copy;</h4>
+        </div>
+    </div>
+</div> 
+
+</body>
+</html>
+
+<script src="./js/curtidas_livros.js">
+
+</script>

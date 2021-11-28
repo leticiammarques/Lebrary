@@ -12,7 +12,7 @@
     <link rel="shortcut icon" href="./assets/imgs/flavicon.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
 </head>
-<body> <!--onload="validarSessao(), atualizarFeed()"-->
+<body onload="validarSessao(), atualizarFeed()"> 
     
   <header id="header" class="header">
         <div class="container">
@@ -35,7 +35,7 @@
                 <a href="./contato.html">AUTORES</a>
               </li>
               <li>
-                <a href="./login.html">COMUNIDADE</a>
+                <a href="./ranking.html">COMUNIDADE</a>
               </li>
               <li>
                 <a href="./login.html" onclick="limparSessao()">SAIR</a>
@@ -237,71 +237,7 @@
 </body>
 </html>
 
-<script>
-
-//  var btn = document.querySelector("#coracao_like");
-
-//  btn.onclick   = function(){
-//   coracao_like.classList.toggle("leaves")
-//  }
-  function puxar_like(idAutor) {
-    var btn = document.getElementById("coracao_like");
-    btn.classList.add('preencher');
-    console.log(btn);
-
-
-  
-    var idUsuario = sessionStorage.ID_USUARIO;
-
-    
-      fetch(`/like/cadastrar/${idUsuario}`, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                   idAutor: idAutor,
-               
-            })
-        }).then(function (resposta) {
-
-            if (resposta.status == 406) {
-                alert('vc ja curtiu')
-            }
-
-            // console.log("resposta: ", resposta);
-            resposta.json().then((json) => {
-                var obj = (json);
-                console.log(obj)
-            }).catch((erro) => {
-
-            })
-
-        }).catch(function (resposta) {
-            if (resposta.status == 406) {
-                alert('vc ja curtiu')
-            }
-            console.log(`#ERRO:${resposta}`);
-
-        });
-    
-
-
-    
-    // var possuiPreencher = false;
-    // for (var i = 0; i < btn.classList.length; i++) {
-    //   var classe = btn.classList[i];
-    //   console.log(classe); 
-    //   if (classe == "preencher") {
-    //     possuiPreencher = true;
-    //   }
-    // }
-    // if (possuiPreencher == true) {
-    //   btn.classList.remove("preencher");
-    // } else {
-    //   btn.classList.add("preencher");
-    // }
-  }
+<script src="./js/curtidas_livros.js">
 </script>
 
    <!-- document.getElementById("coracao_like").addEventListener("click", function() {
