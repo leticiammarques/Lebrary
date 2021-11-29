@@ -64,6 +64,12 @@ insert into livros values
     (null, 'A Batalha do Labirinto', 'Fantasia', 'Intrínseca', 1),
     (null, 'O Último Olimpiano', 'Fantasia', 'Intrínseca', 1);
     
+insert into livros values 
+	(null, 'A Última Música', 'Romance', 'Novo Conceito', 2, 'http://www.descortinandohorizontes.com/wp-content/uploads/2015/01/a-ultimamusica.jpg'),
+    (null, 'Diário de Uma Paixão', 'Romance', 'Novo Conceito', 2, 'https://images-na.ssl-images-amazon.com/images/I/71aS13e+OYL.jpg'),
+    (null, 'A Escolha', 'Romance', 'Novo Conceito', 2, 'https://images-na.ssl-images-amazon.com/images/I/71Tn+WdqilL.jpg'),
+    (null, 'Querido John', 'Romance', 'Novo Conceito', 2, 'https://5934488p.ha.azioncdn.net/capas-livros/9788563219213-nicholas-sparks-querido-john-466633138.jpg'),
+    (null, 'O Milagre', 'Romance', 'Arqueiro', 2, 'http://4.bp.blogspot.com/-v6snMB0w5yo/VRWS1KmUv4I/AAAAAAAANro/jboXJzR3VUc/s1600/CA-EkIgWUAA1ewC.jpg');
 
 select * from autor;
 select * from livros;
