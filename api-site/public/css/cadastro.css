@@ -588,6 +588,7 @@ button {
   border-radius: 10px;
   color: var(--color-purple);
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  font-weight: 900;
 }
 
 .inicio-autor .container .autores {
@@ -794,7 +795,7 @@ button {
   width: 60px;
   height: 100%;
   transform-origin: left;
-  background: url(../assets/imgs/side.jpg);
+  background: url(../assets/capas/ldr_lado.jpeg);
   background-position: center;
   transform: rotateY(90deg);
 }
@@ -805,7 +806,7 @@ button {
   width: 100%;
   height: 100%;
   transform-origin: center;
-  background: url(../assets/imgs/back.jpg);
+  background: url(../assets/capas/ldr_costas.jpeg);
   background-position: center;
   transform: rotateY(180deg) translateZ(60px);
 }
@@ -819,6 +820,46 @@ button {
   object-fit: cover;
 }
 
+.inicio-livro .container .livros section .dois:before {
+  background: url(../assets/capas/mdm_lado.jpeg);
+  object-fit: cover;
+}
+
+.inicio-livro .container .livros section .dois:after {
+  background: url(../assets/capas/mdm_costas.jpeg);
+  object-fit: cover;
+}
+
+.inicio-livro .container .livros section .tres:before {
+  background: url(../assets/capas/mdt_lado.jpeg);
+  object-fit: cover;
+}
+
+.inicio-livro .container .livros section .tres:after {
+  background: url(../assets/capas/mdt_costas.jpeg);
+  object-fit: cover;
+}
+
+.inicio-livro .container .livros section .quatro:before {
+  background: url(../assets/capas/bdl_lado.jpeg);
+  object-fit: cover;
+}
+
+.inicio-livro .container .livros section .quatro:after {
+  background: url(../assets/capas/bdl_costas.jpeg);
+  object-fit: cover;
+}
+
+.inicio-livro .container .livros section .cinco:before {
+  background: url(../assets/capas/ouo_lado.jpeg);
+  object-fit: cover;
+}
+
+.inicio-livro .container .livros section .cinco:after {
+  background: url(../assets/capas/ouo_costas.jpeg);
+  object-fit: cover;
+}
+
 .inicio-livro .area-explicacao {
   width: 50%;
   color: var(--color-ligth);
@@ -826,6 +867,7 @@ button {
   text-align: justify;
   border-radius: 10px;
   background-color: var(--color-purple);
+  font-weight: 900;
 }
 
 .inicio-livro .area-explicacao .autores .curtir {
@@ -843,7 +885,7 @@ button {
   flex-direction: column;
   height: 80vh;
   color: var(--color-purple);
-
+  font-weight: 900;
 }
 
 .area-livro .fundo-cap {
@@ -876,7 +918,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 120vh;
 }
 
 .ranking .container {
