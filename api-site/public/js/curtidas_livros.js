@@ -7,7 +7,7 @@ fetch(`/like`, {
     resposta.json().then((json) => {
         var obj = (json);
         console.log(obj)
-        for(var i = 0; i < obj.length; i++) {
+        for(var i = 0; i < 5; i++) {
             rank.innerHTML += `
         <div class="cards">
                 <img src="${obj[i].capas}" alt="">

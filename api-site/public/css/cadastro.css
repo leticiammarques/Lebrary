@@ -39,6 +39,7 @@ body {
     margin: 0;
     background-color: var(--color-blue-ligth);
     font-family: 'Courier New', Courier, monospace;
+    color: var(--color-purple);
 }
 
 a {
