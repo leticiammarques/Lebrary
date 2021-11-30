@@ -63,6 +63,7 @@ function cadastrar(req, res) {
     var nome = req.body.nome;
     var email = req.body.email;
     var senha = req.body.senha;
+
    
 
 
@@ -96,5 +97,4 @@ module.exports = {
     entrar,
     cadastrar,
     listar,
-    testar
 }
